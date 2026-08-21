@@ -1,0 +1,12 @@
+#! /bin/bash
+
+s=$1
+
+case "$s" in
+	emon)echo hi emon, how are you?;;
+	suman)echo ohh there he is;;
+	sunil)echo uh oh here comes trouble;;
+	*)echo idk who you are so just leave;;
+esac
+
+

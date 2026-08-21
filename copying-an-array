@@ -1,0 +1,20 @@
+#!/bin/bash
+
+first_array=(foo bat baz)
+second_array=( "${first_array[@]}" ) #copying an array in this line
+
+ |-----------------------------------------------------------------------------|
+#|second_array=( "${first_array[@]}" we can add element like this in an array) |
+ |-----------------------------------------------------------------------------|
+
+for item in "${second_array[@]}"; do
+	echo "item is: $item"
+done
+
+
+#also we can add an element to an array like this:
+#second-array=( "first_array[@]}" )
+#second_array+=(we can add element like this too)
+
+
+

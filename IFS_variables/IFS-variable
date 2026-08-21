@@ -1,0 +1,15 @@
+#!/bin/bash
+
+array=(
+	foo
+	bar 
+	baz
+)
+
+(
+	IFS=,
+	echo "array is: ${array[*]}"
+) 
+#the output will be : foo,bar,baz  (bcz the first character(,) of the IFS is the thing that splits it or stringfize it
+
+

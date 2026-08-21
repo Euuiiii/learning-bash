@@ -1,0 +1,8 @@
+#!/bin/bash
+
+while [[ -f file.js ]]; do 
+	echo 'file.js exists and is a JavaScript aka JS file'
+	sleep 1
+done 
+
+echo 'file is gone'

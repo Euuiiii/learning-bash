@@ -1,0 +1,21 @@
+#! /bin/bash
+
+array=(foo bar baz)
+
+for (( i=0; i < 3; i++)); do
+	echo "$i: ${array[i]}"
+done
+
+
+
+idx=2
+echo "idx: ${array[$idx]}"
+
+#the dollar sign for index is optional and can also bw done without it like ->
+#echo "idx: ${array[idx]}"
+
+
+#the @ sign is used to treat it like an array  (sequence // iterate over it)
+for item in "${array[@]}"; do
+	echo "item is: $item"
+done

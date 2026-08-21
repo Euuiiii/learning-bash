@@ -1,0 +1,24 @@
+#!/bin/bash
+
+i=5
+my-func() {
+	i=6
+	echo hi
+}
+
+thing=$(my-func)
+echo "thing is $thing"
+echo "i is $i" # the output will be i is 5 and not 6 because it is running in the sub shell
+
+#but if we call the function like this 
+my-func
+echo "i is $i" #then the output will be i is 6 -> function by default can modify the global scope
+
+
+#alternative syntax 
+#this syntax is able to modify the global scope 
+#this is faster than the subshell method
+
+thing=${ my-func;}  #it didn't  ran in the subshell it ran in the main shell
+echo "thing is $thing"
+echo "i is $i"

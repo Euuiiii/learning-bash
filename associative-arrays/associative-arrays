@@ -1,0 +1,36 @@
+#!/bin/bash
+
+
+#while dealing with associative array we should use the syntax / flag   -A
+
+#checking if the feature is available in the users device/ bash version   
+#if ! declare -A arr; then
+#	echo "uh oh, i couldn't make an associative array" >&2
+#	exit 1
+#fi
+
+declare -A arr
+arr[foo]=1
+arr[bar]=2
+arr[baz]=3
+
+#echo "${arr[foo]}"
+#echo "${arr[bar]}"
+#echo "${arr[baz]}"
+
+
+
+#the output of both will be similar (they loop over the values not the keys)
+#echo "${arr[@]}"
+#echo "${arr[*]}"
+
+#if we want to loop over the value of p
+#echo "${!arr[*]}"
+
+
+
+for key in "${!arr[@]}"; do
+	value=${arr[$key]}
+	echo "got $key=$value"
+done
+

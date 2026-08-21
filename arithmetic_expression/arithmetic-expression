@@ -1,0 +1,41 @@
+#!/bin/bash
+
+read -p 'Enter first number: ' a
+read -p 'Enter second number: ' b
+
+read -p 'Choose an option: 
+	1: Sum
+	2: Subtraction
+	3: multiplication 
+	4: exponential / power
+	5: division
+	6: modulo ' res
+
+case "$res" in
+	1)
+		result=$(( a + b ))
+		echo "sum is $result"
+		;;
+	2)
+		result=$(( a - b))
+		echo "subtraction is $result"
+		;;
+	3)
+		result=$(( a * b))
+		echo "multiplication is $result"
+		;;
+	4)
+		result=$(( a ** b ))
+		echo "exponential is $result"
+		;;
+	5)
+		result=$(( a / b )) 
+		echo "division is $result"
+		;;
+	6)
+		result=$(( a % b ))
+		echo "modulo is $modulo"
+		;;
+esac
+
+

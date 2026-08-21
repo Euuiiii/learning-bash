@@ -1,0 +1,23 @@
+#!/bin/bash
+
+
+#for nesting commands
+
+
+echo backticks
+#not a nice way to nest the commands
+whoami
+echo `whoami`
+echo `echo \`whoami\``
+echo `echo \`echo \\\`whoami\\\`\``
+
+
+echo dollar-parens notation
+whoami
+echo "$(whoami)"
+echo "$(echo "$(whoami)")"
+echo "$(echo "$(echo "$(whoami)")")"
+
+
+
+
