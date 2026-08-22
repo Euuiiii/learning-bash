@@ -1,0 +1,25 @@
+#!/bin/bash
+
+a=06
+echo "$a"
+echo $(( a ))
+
+#the out put in echo "$a" is 06 bcz there we treat a like a string but in echo $(( a )) the output will be 6 bcz we treat a like a number 
+
+
+#but there is a catch for a = 08  lets try that:
+b=08
+
+echo "$b"
+echo $(( b ))
+
+# here for echo "$b" the output will be 08
+#
+# but for echo $(( b )) we will get -> ./octal: line 14: 08: value too great for base (error token is "08")
+# its bcz arithmetic expression when it detects the leading zero it treats it like octal -> base 8 so the number 8 to high for octal 
+
+
+# we can force the base by using # after the base value and $ before the var inside arithemetic expression
+
+echo $(( 10#$b ))
+

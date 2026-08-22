@@ -1,0 +1,16 @@
+#!/bin/bash
+
+a=10
+
+if ((a % 2)); then
+	echo true
+else 
+	echo false
+fi
+
+
+#The output of this script will be false but we know that 10 % 2 == 0 then it should be true but the output is false
+#it is bcz zero is considered failure inside a math expression and the failure to bash is non zero
+# so we need to write if (( a % 2 == 0 )); then echo true else echo false fi
+
+

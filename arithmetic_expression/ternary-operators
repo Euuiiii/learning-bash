@@ -1,0 +1,12 @@
+#!/bin/bash
+
+
+
+
+#for max among two numbers
+a=2
+b=3
+
+(( max = a > b ? a : b ))
+
+echo "max = $max"
