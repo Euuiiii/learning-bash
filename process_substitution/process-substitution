@@ -1,0 +1,43 @@
+#!/bin/bash
+
+
+i=0
+
+
+while read -r word; do
+	echo "$word"
+	((i++))
+done < <(grep d /usr/share/dict/words) 
+
+echo "found $i words"
+
+
+
+#Process Substitution is a feature that allows the output or input of a command to be treated as a file, enabling complex data piplelines and comparisions without creating temporary files on disk.
+
+
+#<(command here)  -> Input Substitution -> Runs the command async and provides its output as a file path for reading -> commonlty used to feed multiple command outputs into a single program that expects file arguments
+
+
+#>(command here) -> Output Substitution -> Provides a file path that, when written to, sends thaat data as input to teh specified command. This allows a single command's output to be split and sent to multiple destinations simultaneously
+
+
+# -> Unlike pipes, which only handle a single stream, process substitution allows commands like diff or comm to compare the results of two or more commands directly
+#  ==>> diff <(ls /dir1) <(ls /dir2)
+#
+#  Parallel Execution : 
+#  			Commads inside process substitution run i parallel, which can improve performance for heavy tasks like sorting or filtering large datasets before comparision    -> diff <(sort huge_file.txt) <(sort huge_file2.txt)
+#
+#
+# diff btwn command substitution and process substitution
+#
+# command substitution : 
+#   var=$(echo "hello")  -> output becomes a string value
+#
+# process substitution : 
+#   cat <(echo "hello")  -> output becomes a file path for another command
+
+
+
+
+

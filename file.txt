@@ -1,4 +1,10 @@
-
+emon
 foo 
 bar 
 baz
+git
+github
+learning 
+bash 
+scripting
+
