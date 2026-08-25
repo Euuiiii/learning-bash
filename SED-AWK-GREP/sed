@@ -1,0 +1,25 @@
+-----------------------------------------------------------------
+|								|
+|			SED  ---> Stream Editor			|	
+|								|
+-----------------------------------------------------------------
+(sed  supports regex)
+
+eg : lets suppose we have to modify bindu in bindu:/bin/bash  to buddy:/bin/bash
+
+ we can do :
+	cat /etc/passwd | grep bindu | cut -d : -f 1,7 | tr bindu buddy
+	
+	it will change bindu:bin/bash  to  buddy:/byd/bash
+	-> its bcz tr performs character to characrer replacement
+	So, b->b i->u n->d d->d u->y  so bin will also be changed into byd (i->u->y && n->d) 
+
+ 	so in this case sed comes handy 
+	we can change bindu:/bin/bash easily by using the command:
+	cat /etc/passwd | grep bindu | cut -d : -f 1,7 | sed 's/bindu/buddy/'
+
+	
+	Note: It is a change in the output printed in the screen and not a system change.
+
+
+ 

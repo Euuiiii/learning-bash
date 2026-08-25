@@ -1,0 +1,26 @@
+we have a file named simple.csv
+
+and when we run the command :   cat simple.csv | tr , '\t'    --> then the contents in simple.csv file will be loaded in 
+tabular form by changing the commas into a tab   ( tr , '\t' )
+
+Tr can translate one character to another (swap)
+
+
+-->  cut
+
+cat simple.csv | cut -d, -f 1 --> it will provides the field one of the simple.csv as an output 
+if we change    -f 1 to -f 2 or -f 3 then it will provides the fild which we indexed there as an output 
+
+
+we can also do 
+     -f 1,2  -> provides first and second field 
+
+and also 
+     we can do    -f 1-i (i should be a numeric value like 1 2 3 4..) --> provides the field from 1 to ith index
+
+
+
+-----------------
+
+cat simple.csv | cut -d , -f 1-2,4 | tr , '\t' --> this will swap commas with tab  and only provides field 1 2 and 4
+
