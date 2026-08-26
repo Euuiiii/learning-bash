@@ -1,0 +1,10 @@
+  	--> AWK - text processing utility <--
+
+
+mawk is an interpreter for the AWK programming language 
+
+is useful for manipulation of data files, text retrieval and processing and for prototyping and experimenting with algorithms
+
+-> is a sequence of pattern {action} pairs and function definitions.
+
+

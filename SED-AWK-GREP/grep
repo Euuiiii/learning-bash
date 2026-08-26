@@ -1,0 +1,68 @@
+   	---> grep <---    By Dejan Panovski  (https://linuxize.com/cheatsheet/grep/)
+
+
+Basic Search
+Find matching lines in a file.
+grep "pattern" file.txt	Search a single file
+grep -i "pattern" file.txt	#Case-insensitive search
+grep -n "pattern" file.txt	#Show line numbers
+grep -v "pattern" file.txt	#Invert match
+grep -w "word" file.txt		#Match whole word
+--------------------------------------------------------------------------------
+
+Multiple Files #
+
+Search across multiple files.
+grep "pattern" file1 file2	#Search specific files
+grep "pattern" *.log	        #Search by glob
+grep -l "pattern" *.log		#Show matching filenames
+grep -L "pattern" *.log		#Show non-matching filenames
+--------------------------------------------------------------------------------
+
+Recursive Search
+
+Search directories recursively.
+grep -r "pattern" dir/				#Recursive search
+grep -R "pattern" dir/				#Follow symlinks
+grep -r --include="*.conf" "pattern" dir/	#Include file types
+grep -r --exclude="*.log" "pattern" dir/	#Exclude file types
+grep -r --exclude-dir=.git "pattern" dir/	#Skip directories by base name
+--------------------------------------------------------------------------------
+
+Context Output #
+
+Show lines around matches.
+grep -C 3 "pattern" file.txt	#3 lines before and after
+grep -A 2 "pattern" file.txt	#2 lines after
+grep -B 2 "pattern" file.txt	#2 lines before
+
+--------------------------------------------------------------------------------
+Count and Only Matches #
+
+Summarize or extract matches.
+grep -c "pattern" file.txt	#Count matching lines
+grep -o "pattern" file.txt	#Only the matching part
+grep -m 1 "pattern" file.txt	#Stop after 1 match
+---------------------------------------------------------------------------------
+Extended Regex #
+
+Use more powerful patterns.
+grep -E "foo|bar" file.txt	#Alternation
+grep -E "colou?r" file.txt	#Optional character
+grep -E "[0-9]{3}" file.txt	#Repetition
+grep -E "^start" file.txt	#Line starts with
+grep -E "end$" file.txt		#Line ends with
+---------------------------------------------------------------------------------
+
+Common Options #
+
+Useful flags to remember.
+-i	Ignore case
+-n	Show line numbers
+-v	Invert match
+-w	Match whole words
+-r	Recursive search
+-E	Extended regex
+-F	Fixed strings (no regex)
+-H	Always show filename
+-q	Quiet mode (exit status only)

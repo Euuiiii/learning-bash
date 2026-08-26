@@ -1,0 +1,50 @@
+--> find [path] [expression/criteria] [action]
+
+1. by name or pattern 
+
+--> case-sensitive search
+	find /path/to/search -name "file.txt"
+
+--> case-insensitive search
+	find . -iname "file.txt"
+
+--> wildcard matching
+	find . -name "*.log"
+
+2. By type (-type)
+
+--> files only (f)
+	find . -type f -name "*.txt"
+
+--> directories only (d)
+	find . -type d -name "config"
+
+--> symbolic links (l)
+	find . -type l
+
+3. by size (-size)
+	find /var -type f-size +100M   	// files larger than 100MB
+	find /var -type f-size -10k   	// files smaller than 10KB
+	find . -empty 			// empty files or directories
+	
+4. by modification time 
+	find . -type f -mtime -7  	//modified in last 7 days
+	find . -type f -mmin -60	//modified within the last 60 min
+
+5. by permission and ownership
+	find / -typr f -perm 777 	//files with exact permission 777
+	find /home -user barsha		//files owned by specific user	
+
+
+
+
+--> Performing actions on result 
+1. Delete matched item directly
+	find . -type f -name "*.txt" -delete
+
+2. Execute a custom command per file 
+	find . -type f -name "*.sh" -exec chmod +x {} \;		#Change permission on all target files
+	find . -type f -name "*.conf" -exec grep -H "port" {} \; 	#Search for text inside matches (find + grep)
+
+3.Combile with xargs (efficient for large lists)
+	find . -type f -name "*.log" -print0 | xargs -0 rm -f   	#safely deletes all files ending in .log
