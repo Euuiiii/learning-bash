@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+. ./lib/greetings  || exit 1
+#we can use . instead of source in source ./lib/greetings
+
+# we can also do 
+# my-source() {
+# 	source -p ./lib "$1"
+# }
+# 
+# my-source greetings || exit 1
+
+greet emon
+greet john 
+goodbye buddy

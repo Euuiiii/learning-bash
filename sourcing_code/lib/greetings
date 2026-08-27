@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+greet(){
+	echo "hello $1"
+}
+
+goodbye(){
+	echo "goodbye $1"
+}
+
+if ! (return 2>/dev/null); then
+	#we are being called directly
+	greet boss
+	goodbye client
+fi
