@@ -1,0 +1,13 @@
+we can check the pipe status by  using the command "${PIPESTATUS[*]}"
+
+
+it is useful when we are dealing with the complex pipe lines like
+
+cat /this-doesnt-exists | tr , : | grep emon | cat
+
+then running PIPESTATUS command may show : 1 0 1 0
+
+	1 = failure (false)
+	0 = success (true)
+
+note : pipe status shows about the last command
