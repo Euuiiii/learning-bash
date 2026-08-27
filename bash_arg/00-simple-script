@@ -1,0 +1,28 @@
+#!/usr/bin/env bash 
+
+
+first_name='john'
+last_name='eddy'
+
+full_name="$first_name $last_name"
+
+if [[ $first_name == 'emon' ]]; then
+	echo "oh hey it's emon"
+fi
+
+echo "Hello $full_name!"
+
+
+# bash -x 00-simple-script    --> this can be used to fix broken scripts (debugging mode)
+# or we can set  set -x 
+#  if we want to set -x for a block of script we can fo like :
+#  set -x
+#  first_name='john'
+#  last_name='eddy'
+#  set +x
+#  other code
+
+# the debug mode is shown with  + at before but we can change that by setting the PS4
+#
+# like if we do :  PS4='[debug]: ' bash -x 00-simple-script  
+# then the debug mode will show  [debug]:  and then the scripts

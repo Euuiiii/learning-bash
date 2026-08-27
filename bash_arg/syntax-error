@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+echo hello
+ 
+if true; then
+	echo goodbye
+fi
+
+# we can check the syntax before running the script by using -n 
+# like : bash -n syntax-error
+
+#we can check sheelcheck to find the syntax error in our script  (shellcheck syntax-error)
+
