@@ -1,0 +1,18 @@
+To time any command we just need to simplt prefix it with time 
+
+
+eg : time ls 
+
+it will give output like 
+
+real	0m2.002s
+user	0m0 001s
+sys	0m0 001s
+
+
+where 
+	real : wall clock time : total elapsed time from start to finish
+	user : user CPU time : Amount of CPU time spent executing the process in user mode (outside the kernel)
+	sys : system CPU time : Amount of CPU time spent inside the kernel on system calls 
+
+Note: total CPU time used by the process is user + sys.  If real < user + sys the command tan across multiple CPU cotrd in parallel
