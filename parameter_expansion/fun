@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+s='dave eddy'
+
+echo "$s"		#dave eddy
+echo "${s}"		#dave eddy
+echo "${#s}"		#9
+echo "${s^}"		#Dave eddy
+echo "${s^^}"		#DAVE EDDY
+echo "${s^^d}"		#Dave eDDy
+echo "${s^d}"		#Dave eddy
+echo "${s^^[da]}"	#DAve eDDy
+
+s='DAVE EDDY'
+echo "${s,,}"		#dave eddy
+echo "${s,}"		#dAVE EDDY
+echo "${s,,[DA]}"	#daVE EDDY
+
+
+
+
+# comma = lowercase
+# ^ = uppercase

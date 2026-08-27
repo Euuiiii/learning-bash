@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+s='dave eddy'
+
+echo "${s}"		#dave eddy
+echo "${s:0}"		#dave eddy
+echo "${s:1}"		#ave eddy
+echo "${s:2}"		#ve eddy
+echo "${s:3}"		#e eddy
+echo "${s:0:2}"		#da
+echo "${s:0:4}"		#dave
+echo "${s:2:4}"  	#ve e
+echo "${s: -1}"		#y
+echo "${s: -2}"		#dy
+echo "${s: -3}"		#ddy
+

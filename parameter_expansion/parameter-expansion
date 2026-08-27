@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+
+#name=${1:-Steve}  --> :- means if we dont provide any value to name then name by default will be Steve
+#name=${1:-$USER}   --> :-$USER will take the users name and set that to the variable name value
+
+#name=${1? 'You must provide a name'} --> if the user doesnt provide any name (arguments) then it will show the error msg and display the text 'You must provide a name'
+
+
+
+echo "hello $name"
+echo "done"
+
+
+
+
+#like we do previouslt in path 
+	echo "$PATH" | tr o a   # to change o to a
+# we can do that same thing in bash by 
+	echo "${PATH/o/a}"  #but this only changes one time eg : if we have home/omarchy  ---> hame/'omarchy
+
+#so if we want to change o to a in every word we need 
+	echo "${PATH//o/a}"
+
+
+#and for basename "$PATH" we can do that in bash by
+	echo "${PATH##*/}"
+
+#and for dirname "$PATH" we can do 
+	echo "${PATH%/*}"
