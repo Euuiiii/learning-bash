@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
-greet(){
+greet() {
 	echo "hello $1"
 }
 
-goodbye(){
+goodbye() {
 	echo "goodbye $1"
 }
 
