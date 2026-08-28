@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+arr=(foo bar baz)
+
+printf '%s\n' "${arr[@]}" #prints every element of an array in new line
+
+printf '%s\n' "${arr[@]:1}" #starts printing arr from arr[1]  --> index 1
+
+printf '%s\n' "${arr[@]:2}" #starts printing arr from arr[2]  --> index 2
+
+printf '%s\n' "${arr[@]//a/o}" #replaces every a with o
+
+printf '%s\n' "${arr[@]%z}" #removes z from end
+
+printf '%s\n' "${arr[@]#b}" #removes b from beginning
+
+#when you wanna stringfy the array we need to :
+(IFS=_; echo "${arr[*]}") 
+
+
