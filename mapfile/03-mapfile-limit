@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+mapfile -t -n 2 foo < data.txt  # -n 2 limits/says to read upto two lines and not after that 
+
+#print array
+printf '<%s>\n' "${foo[@]}"
