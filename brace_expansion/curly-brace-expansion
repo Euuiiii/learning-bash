@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+filename='my-file'
+
+#echo "$filename."{txt,jpg,mov}
+
+arr=( "$filename."{txt,jpg,mov} )
+
+for item in "${arr[@]}"; do
+	echo "$item"
+done
+

@@ -1,0 +1,7 @@
+#!/usr/bin/env bash 
+
+echo {hello,world,this,is,brace,expansion}
+
+#we can prove that they are broken up into multiple arguments by: 
+printf '%s\n' {hello,world,this,is,brace,expansion}
+
