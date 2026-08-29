@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+ls -1 files/     	#-1 forces ls to format output as one entry per line 
+
+printf '%s\n' files/*  	#Shell expands files/* (globbing), printf prints each results on a new line
+
+ls -1 files/*  		#-1 forces ls to format output as one entry per line and * will take all the files
+
+ls -1 fies/*.txt	#*.txt will take all the files inside files directory which endes with .txt
+
+ls -1 files/*.jpg    	#same as above but with .jpg
+
+ls -1 files/foo.*  	#will show every files thats name is foo (no matter what the file type is
+
+ls -1 files/bar.*	#same as above but name should be bar
+
+ls -1 files/ba?.txt	#this will show the files that stat with ba and have file type .txt
+
+ls -1 files/ba[abc].txt #this will show the files that starts with ba and have a or b or c after that (with .txt file type)
+
+ls -1 files/ba[abcrz].* #this will show every files that starts with ba and have a/b/c/r or z after that with any file type
+

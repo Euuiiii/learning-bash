@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+shopt -s extglob #Enabling extended globbing
+
+ls -1 files/!(*.txt) #lists all files except those ending in .txt
+
+ls -1 files/+(foo|bar).txt #lists files matchng foo/bar.txt --> one or more occurences
+
+# +(thing) --> /(thing)+/	--> one or many times
+# ?(thing) --> /(thing)?/	--> zero or one times
+# *(thing) --> /(thing)*/	--> zero or many times
+
+ls -1 files/@(foo).*		# @ == must match 
+ls -1 files/@(foo|bar).* 	# must match with foo or bar
+
+
+ls -1 files/@(foo|ba?).* 

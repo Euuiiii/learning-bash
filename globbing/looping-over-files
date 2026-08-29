@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+for file in *.txt; do
+	[ -f "$file" ] || continue   #handles empty matches if nullglob isn't set
+	echo "Processing $file"
+done
