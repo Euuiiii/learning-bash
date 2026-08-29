@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+printf 'the date is %(%Y/%m/%d %H:%M:%S)T\n'
+
+printf '%(%s)T\n' -1   #for epoch time (Unix time / POSIX time) -> we can also do that by using date +%s
+
+

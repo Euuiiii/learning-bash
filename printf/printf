@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+read -p 'Choose an option:
+	1. printf() --> shell 
+	2. printf(3)
+	3. man printf' res
+
+
+	case "$res" in 
+		1) echo "$(help printf)";;
+		2) echo "$(man 3 printf)";;
+		3) echo "$(man printf)";;
+	esac
+
