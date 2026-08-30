@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+a=9
+b=10
+
+if [[ $b > $a ]]; then  #here we are comparing 9 and 10 as a string so we will get false  (07-number-fix is the right way)
+	echo "$b is greater than $a"
+else
+	echo "uh oh its shit"
+fi
