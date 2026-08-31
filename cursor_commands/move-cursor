@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+
+# save the cursor position
+printf '\e7'
+
+# jump somewhere
+printf '\e[20;20H'
+
+# print "hello world"
+printf 'Hello World'
+
+# restore the cursor
+printf '\e8'
+
+
+
+# --> ANSI escape sequences --> https://gist.github.com/fnky/458719343aabd01cfb17a3a4f7296797
