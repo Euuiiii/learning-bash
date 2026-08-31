@@ -20,4 +20,6 @@ youtube video link : https://youtu.be/Sx9zG7wa4FA?si=Yt31qKkEijX5V8sp
 *(Dave Eddy is one of the best mentors out there!)*
 
 ---
-
+### Useful Resources
+1. Bash pitfalls  https://mywiki.wooledge.org/BashPitfalls
+2. Bash Reference https://doc.guix.gnu.org/bash/5.2.37/en/bashref.html
